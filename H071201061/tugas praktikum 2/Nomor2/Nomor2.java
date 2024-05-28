@@ -78,13 +78,13 @@ public class Nomor2{
                 System.out.print("Volume = ");
                 System.out.printf("%.1f" , volume);
             } else if (n==3){
-                double phi = 3.14;
                 System.out.println("Input Jari-Jari");
                 int r = x.nextInt();
                 System.out.println("Input Tinggi");
                 int t = x.nextInt();
                 double rp2 = Math.pow(r,2);
-                double volume  = phi *rp2 *t ;
+                System.out.println(Math.PI);
+                double volume  = Math.PI *rp2 *t ;
                 System.out.print("volume = ");
                 System.out.printf("%.1f" , volume);                
             } else if (n==4){

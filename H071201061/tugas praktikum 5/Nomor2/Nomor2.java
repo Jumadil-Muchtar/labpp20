@@ -10,31 +10,20 @@ class Nomor2{
 		String serialNumber = generateSerial(n,m);
 		System.out.println(serialNumber);
 
+		scanner.close();
+
 	}
 	public static String generateSerial (int n, int m){
 		int arrayy [] = new int[n];String str= "";
-			for (int i=0; i<n; i++){
-				arrayy[i] = (int) (Math.random()*(Math.pow(10,m))) ;
-				if (arrayy[i]>(Math.pow(10,m-1)-1)){
-					if (i<n-1){
-						str = str + arrayy[i]+ "-";}
-					else { 
-						str = str + arrayy[i]; }
-				}
-				else if ((arrayy[i]>Math.pow(10,m-2)-1)&&(arrayy[i]<(Math.pow(10,m-1)))){
-					String strr = "0" + arrayy[i];
-					if (i<n-1){
-						str = str + strr+ "-";
-					}
-					else { 
-						str = str + strr; 
-					}
-				}
-			}
 			
-		
-		
-
+		for (int i=0; i<n; i++){
+			arrayy[i] = (int) (Math.random()*(Math.pow(10,m))) ;
+			String formatt = "%0"+m+"d";
+			String formatted = String.format(formatt, arrayy[i]);
+			
+			if (i<n-1)str = str + formatted+ "-";
+			else str = str + formatted; 
+		}
 		return str;
 	}
 }

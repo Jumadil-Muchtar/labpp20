@@ -8,11 +8,10 @@ public class Nomor1{
         for (int i =0; i<n; i++){
             arrayy [i] = input.nextInt();
         }
+        input.close();
         //int d=n;
         //int c= 1;
         for (int j=0; j<n; j++){
-            
-            
             for (int k=0; k<n; k++){
                 if ((j!=k) && (j<k)){
                     if (arrayy[j]!=arrayy[k]){
@@ -21,28 +20,15 @@ public class Nomor1{
                             if (arrayy[j]%l==0){
                                 if (arrayy[k]%l==0){
                                     b++;
-    
                                 }
                             }
-                        }
-                            
-                            
+                        }  
                         if (b==0){
                                 System.out.println(arrayy[j] + "  " + arrayy[k]);
                         } 
-                        
-                        
-                        
-                        
-                        
                     }
-                    
-                    
                 }
             }
         }
-
-        
-        
     }
 }

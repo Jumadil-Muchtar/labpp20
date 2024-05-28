@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class Nomor2 {
-     public static void main(String[] args){
+    public static void main(String[] args){
        Scanner inputan = new Scanner(System.in);
        int i = inputan.nextInt();
        int j = inputan.nextInt();
@@ -29,14 +29,12 @@ public class Nomor2 {
        // jumlah kolom hasil kali = jumlah kolom matriks B = k
        
        for (int a= 0; a<i ; a++){
-         for (int b= 0; b<k; b++){
-           matriksAxB[a][b] =0; 
-           for (int c= 0; c<j; c++){
+          for (int b= 0; b<k; b++){
+            matriksAxB[a][b] =0; 
+            for (int c= 0; c<j; c++){
               matriksAxB[a][b] = matriksAxB[a][b] + (matriksA[a][c]*matriksB[c][b]);
-             
-           }
-           
-         }
+            }
+          }
        }
        int kolomMatriksAxB = k;
        for (int a3=0; a3<i;a3++){
@@ -51,7 +49,6 @@ public class Nomor2 {
            }
          }
        }
-     }
-     
-
+       inputan.close();
+    }
 }

@@ -7,10 +7,7 @@ public class Nomorr1{
         FileOutputStream keluaran = null;
         File cek = null;
 
-        
-
         try {
-
             String namaFile = inputt.nextLine();
             String namaFileSalinan = inputt.nextLine();
             masukan = new FileInputStream(String.format("%s.txt" , namaFile));
@@ -28,8 +25,6 @@ public class Nomorr1{
             System.out.println("Gagal");
         } finally{
             try {
-                
-
                 if (masukan != null){
                     masukan.close();
                 }

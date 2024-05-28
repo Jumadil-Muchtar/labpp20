@@ -2,6 +2,8 @@ import java.util.Scanner;
 public class Nomor1{
 
     public static void main(String[] args){
+		System.out.println("** Mengelompokkan angka **");
+		System.out.println("Inputan ");
 		Scanner x = new Scanner(System.in);
 		
         int a = 0;
@@ -10,7 +12,8 @@ public class Nomor1{
         int d = 0;
         int e = 0;
         String outputt = "Valid"; 		
-
+		
+		System.out.println("Masukkan 5 angka yang dipisahkan dengan spasi");
 		try {
 			a = x.nextInt();
 		    b = x.nextInt();
@@ -23,116 +26,81 @@ public class Nomor1{
             outputt = "Inputan Tidak Valid" ;
             System.out.println(outputt);
             return;
-			
 		}
        
-        
         int genap = 0;
         int ganjil = 0;
         int positif = 0;
         int negatif= 0;
 
-
-		
+		// a
 		if (a>0){
-			if (a%2==0){
-				genap++;
-				positif++;
-			} else {
-				ganjil++;
-				positif++; }
+			positif++;
+			if (a%2==0) genap++;
+			else ganjil++;
 		} else if (a==0){
 				genap++;
-        } else if (a<0) {
-			if (a%2==0){
+        } else {
+			negatif++;
+			if (a%2==0) genap++;
+			else ganjil++;
+		} 
+		// b
+		if (b>0){
+			positif++;
+			if (b%2==0) genap++;
+			else ganjil++;
+		} else if (b==0){
 				genap++;
-				negatif++;
-			}else {
-				ganjil++;
-				negatif++;}
-		} else {
-			
+        } else {
+			negatif++;
+			if (b%2==0) genap++;
+			else ganjil++;
+		}
+		// c
+		if (c>0){
+			positif++;
+			if (c%2==0) genap++;
+			else ganjil++;
+		} else if (c==0){
+				genap++;
+        } else {
+			negatif++;
+			if (c%2==0) genap++;
+			else ganjil++;
 		}
 
-
-        if (b>0){
-		if (b%2==0){
-			genap++;
+		// d
+		if (d>0){
 			positif++;
-		} else {
-			ganjil++;
-			positif++; }
-		} else if (b==0){
-		genap++;
-        } else  {
-		if (b%2==0){
-			genap++;
-			negatif++;
-		}else {
-			ganjil++;
-			negatif++;}
-	}
-	
-        if (c>0){
-		if (c%2==0){
-			genap++;
-			positif++;
-		} else {
-			ganjil++;
-			positif++; }
-		} else if (c==0){
-		genap++;
-        } else  {
-		if (c%2==0){
-			genap++;
-			negatif++;
-		}else {
-			ganjil++;
-			negatif++;}
-	}
-
-        if (d>0){
-		if (d%2==0){
-			genap++;
-			positif++;
-		} else {
-			ganjil++;
-			positif++; }
+			if (d%2==0) genap++;
+			else ganjil++;
 		} else if (d==0){
-		genap++;
+				genap++;
         } else {
-		if (d%2==0){
-			genap++;
 			negatif++;
-		}else {
-			ganjil++;
-			negatif++;}
-	}
+			if (d%2==0) genap++;
+			else ganjil++;
+		}
 
-        if (e>0){
-		if (e%2==0){
-			genap++;
+		// e
+		if (e>0){
 			positif++;
-		} else {
-			ganjil++;
-			positif++; }
+			if (e%2==0) genap++;
+			else ganjil++;
 		} else if (e==0){
-			genap++;
+				genap++;
         } else {
-		if (e%2==0){
-			genap++;
 			negatif++;
-		}else {
-			ganjil++;
-			negatif++;}
-	} 
-	
-		System.out.println(ganjil + " ganjil");
-		System.out.println(genap + "genap");
-		System.out.println(negatif + "negatif");
-		System.out.println(positif + "positif");   
+			if (e%2==0) genap++;
+			else ganjil++;
+		}
 
-	
+		System.out.println("\nOutput ");
+		System.out.println(ganjil + " ganjil");
+		System.out.println(genap + " genap");
+		System.out.println(negatif + " negatif");
+		System.out.println(positif + " positif");   
 	}
 	
 	
